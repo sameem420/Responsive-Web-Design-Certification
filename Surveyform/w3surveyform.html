@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>e-Sports Survey</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+#title {
+	text-align: center;
+}
+#description {
+	text-align: center;
+}
+#image {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+} 
+input[type=text], [type=email], [type=number], select, fieldset, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: dodgerblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(11, 107, 200);
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 10px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75,input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+#main {
+    margin: 50px 50px 0px 50px;
+}
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+}
+  
+  /* Style the header links */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Style the active/current link*/
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+  
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+.header a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+.header-right {
+    float: none;
+}
+}
+#survey-form {
+    margin-top: 50px;
+}
+#about {
+    text-align: center;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1 id="title">eSports Survey Form</h1>
+<p id="description">eSports related data collector</p>
+<main id="main">
+<div class="container">
+        <div class="header">
+                <h1 id="logo"><a href="#default" class="logo">Esports Survey</a></h1>
+                <div class="header-right">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#survey-form">Survey</a>
+                </div>
+            </div>
+            <div class="img-div">
+                    <img id="image" src="https://i.imgur.com/NTstQP9.jpg" alt="a-image-showing-content-related-to-gaming">
+            </div>
+  <form action="/" id="survey-form">
+    <div class="row">
+      <div class="col-25">
+        <label for="name" id="name-label">Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email" id="email-label">Last Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="Your Email..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname" id="number-label">Age:</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="number" name="age" min="1" max="125" placeholder="Your Age..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+   			
+      </div>
+      <div class="col-75">
+      <fieldset id="field">
+      	<legend>Gender:</legend>
+                    <p>
+                      <input type="radio" name="gender" id="male" value="Male" class="input-field">
+                      <label for="gender">Male</label>
+                    </p>
+                    <p>
+                      <input type="radio" name="gender" id="Female" value="Female" class="input-field">
+                      <label for="gender">Female</label>
+                    </p>
+                  </fieldset>   
+         </div>         
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Location/Region:</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option disabled value>Select an option</option>
+          <option value="australia">North America</option>
+          <option value="canada">South America</option>
+          <option value="eu">Europe</option>
+          <option value="cis">CIS Region</option>
+          <option value="wa">Western Asia</option>
+          <option value="ea">Eastern Asia</option>
+          <option value="sea">South Eastern Asia</option>
+          <option value="oc">Oceania</option>
+          <option value="africa">Africa</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+           <label for="currentPos">Current role:</label>
+       </div>
+       <div class="col-75">
+            <select id="dropdown" name="currentPos" class="dropdown">
+                    <option disabled value>Select an option</option>
+                    <option value="student">Student</option>
+                    <option value="job">Employee</option>
+                    <option value="job">Gamer/Streamer</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+            </select>
+       </div>
+     </div>
+     <div class="row">
+      <div class="col-25">
+           <label for="games">Games you like to Play:</label>
+       </div>
+       <div class="col-75">
+            <p>
+                              <input type="checkbox" name="games" id="csgo" value="csgo" class="input-field">
+                              <label for="games">CS:GO</label>
+                            </p>
+                            <p>
+                              <input type="checkbox" name="games" id="dota2" value="dota2" class="input-field">
+                              <label for="games">Dota 2</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="games" id="pubg" value="pubg" class="input-field">
+                                <label for="games">PUBG</label>
+                            </p>
+       </div>
+     </div>  
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Additional Comments:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit" id="submit">
+    </div>
+  </form>
+</div>
+</main>
+<div>
+<footer id="about">&copy; 2018 Muhammad Sameem</footer>
+</div>
+</body>
+</html>
