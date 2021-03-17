@@ -1,0 +1,94 @@
+body {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background: linear-gradient(35deg, #CCFFFF,#FFCCCC);
+    font-family: 'Raleway', sans-serif;
+}
+#title {
+    text-align: center;
+}
+#stitle {
+    text-align: center;
+}
+
+#img-div {
+    border: 2px solid white;
+}
+
+#image {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+#image1 {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+#image2 {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+#img-caption {
+    text-align: center;
+    font-size: 22px;
+}
+#tribute-info {
+    margin-top: 50px;
+    border: 2px solid white;
+}
+#journeytitle {
+    padding-left: 20px;
+}
+#journeyinfo {
+    padding-left: 50px;
+}
+#quote {
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border: 2px solid white;
+    text-align: center;
+}
+#quoter {
+    margin-left: 600px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+#tribute {
+    border: 2px solid white;
+    margin-top: 50px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+.img-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+.img-1 {
+    display: inline-block;
+    position: relative;
+    width: 193px;
+    margin-top: 20px;
+    height:auto;
+}
+.img-2 {
+    display: inline-block;
+    position: relative;
+    width: 164px;
+    margin-top: 20px;
+    margin-left: 5px;
+    height:auto;
+}
+footer {
+    text-align: center;
+}
